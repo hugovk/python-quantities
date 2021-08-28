@@ -226,6 +226,8 @@ class TestUmath(TestCase):
             np.arctan2(3*pq.V, 3*pq.V),
             np.radians(45)*pq.dimensionless
             )
+        # NumPy <1.21 raises ValueError
+        # NumPy >=1.21 raises TypeError
         self.assertRaises((TypeError, ValueError), np.arctan2, (1*pq.m, 1*pq.m))
 
     def test_hypot(self):
