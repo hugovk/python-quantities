@@ -50,5 +50,5 @@ jobs:
 
       - name: Test
         run: |
-          PY_IGNORE_IMPORTMISMATCH=1 pytest
+          pytest
           python -m doctest README.rst
